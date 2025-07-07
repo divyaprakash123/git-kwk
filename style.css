@@ -1,0 +1,68 @@
+/* General reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Background and body styling */
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom right, #e0f2e9, #f5f7fa); /* matcha vibe */
+    color: #2e3a59;
+    padding: 40px;
+  }
+  
+  /* Header */
+  h1 {
+    color: #1e443e; /*  matcha green */
+    font-size: 42px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px #b2d8c2;
+  }
+  
+  /* About me - Profile Image */
+  img {
+    width: 280px;
+    height: auto;
+    border-radius: 20px;
+    border: 4px dashed #7dbd8b; /* matcha green border */
+    box-shadow: 0 8px 16px rgba(40, 40, 40, 0.2);
+    margin-bottom: 25px;
+  }
+  
+  /* Paragraph styling */
+  p {
+    max-width: 700px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    background-color: #ffffffcc; /* soft white */
+    padding: 16px;
+    border-left: 5px solid #1e443e;
+    border-radius: 10px;
+    line-height: 1.7;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Adding music emoji */
+  p::before {
+    content: '🎶 ';
+    font-size: 20px;
+    margin-right: 6px;
+    display: inline-block;
+  }
+  p:nth-of-type(2)::before {
+    content: '🤖 ';
+  }
+  
+  /* Integrate later --  Spotify green underline on hover */
+  a {
+    color: #1DB954;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline wavy #1DB954;
+  }
+  
