@@ -1,92 +1,139 @@
-/* Reset */
+/* intial setup */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Body styling */
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    color: #2e3a59;
-    padding: 40px;
-    backdrop-filter: blur(6px);
-  }
-  
-  /* Header with matcha icon */
-  header {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 30px;
-  }
-  .icon {
-    width: 50px;
-    height: 50px;
-  }
-  h1 {
-    color: #1e443e;
-    font-size: 42px;
-    font-weight: bold;
-    text-shadow: 1px 1px #b2d8c2;
-  }
-  
-  /* Profile image */
-  .profile {
-    width: 280px;
-    border-radius: 20px;
-    border: 4px dashed #7dbd8b;
-    box-shadow: 0 8px 16px rgba(40, 40, 40, 0.2);
-    margin-bottom: 25px;
-    display: block;
-  }
-  
-  /* Paragraph styling */
-  p {
-    max-width: 700px;
-    font-size: 18px;
-    background-color: #ffffffcc;
-    padding: 16px;
-    border-left: 5px solid #1e443e;
-    border-radius: 10px;
-    line-height: 1.7;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  }
-  p::before {
-    content: '🎶 ';
-    font-size: 20px;
-    margin-right: 6px;
-    display: inline-block;
-  }
-  p:nth-of-type(2)::before {
-    content: '🤖 ';
-  }
-  
-  /* Playlist styling */
-  .playlist {
-    margin-top: 40px;
-    max-width: 700px;
-  }
-  .playlist h2 {
-    font-size: 24px;
-    margin-bottom: 12px;
-    color: #1DB954;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: #2e3a59;
+  padding: 40px;
+  backdrop-filter: blur(6px);
+  transition: background 0.5s ease, color 0.5s ease;
+}
 
-  /* Fun Facts Section */
+/* Dark Mode */
+body.dark {
+  background-color: #121212;
+  background-image: none;
+  color: #eeeeee;
+}
+body.dark p {
+  background-color: #1e1e1ecc;
+  border-left-color: #7dbd8b;
+}
+body.dark h1,
+body.dark .playlist h2 {
+  color: #90ee90;
+}
+
+/* Dark Mode Button */
+#dark-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #1e443e;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  z-index: 1000;
+}
+#dark-toggle:hover {
+  background: #295e54;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+/*might need to make bigger?*/
+.icon {
+  width: 150px;
+  height: 150px;
+}
+h1 {
+  font-size: 42px;
+  font-weight: bold;
+  text-shadow: 1px 1px #b2d8c2;
+  color: #1e443e;
+}
+
+/* Profile Pic */
+.profile {
+  width: 280px;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(40, 40, 40, 0.2);
+  margin-bottom: 25px;
+  display: block;
+}
+
+/* Paragraphs */
+p {
+  max-width: 700px;
+  font-size: 18px;
+  background-color: #ffffffcc;
+  padding: 16px;
+  border-left: 5px solid #1e443e;
+  border-radius: 10px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Fun Facts Section */
 .fun-facts {
   max-width: 700px;
   margin-top: 20px;
   background-color: #ffffffcc;
 }
 
- /* Fun Facts Section */
+ /* KWK section */
  .kwk {
   max-width: 700px;
   margin-top: 20px;
   background-color: #ffffffcc;
+}
+
+/* Playlist */
+.playlist {
+  margin-top: 40px;
+  max-width: 700px;
+}
+.playlist h2 {
+  font-size: 24px;
+  margin-bottom: 12px;
+  color: #1DB954;
+}
+
+/* Baymax */
+.baymax-wrapper {
+  display: inline-block;
+  margin: 20px 0;
+  cursor: pointer;
+}
+.baymax {
+  transition: transform 0.4s ease;
+}
+.baymax .arm {
+  transform-origin: 60px 120px;
+  transition: transform 0.3s ease;
+}
+.baymax-wrapper:hover .arm {
+  animation: baymax-wave 0.6s ease-in-out infinite;
+}
+@keyframes baymax-wave {
+  0%   { transform: rotate(0deg); }
+  30%  { transform: rotate(-15deg); }
+  60%  { transform: rotate(10deg); }
+  100% { transform: rotate(0deg); }
 }
