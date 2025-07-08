@@ -82,26 +82,30 @@ p {
   max-width: 700px;
   font-size: 18px;
   background-color: #ffffffcc;
-  padding: 16px;
-  border-left: 5px solid #1e443e;
-  border-radius: 10px;
-  line-height: 1.7;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
 /* Fun Facts Section */
 .fun-facts {
   max-width: 700px;
   margin-top: 20px;
-  background-color: #ffffffcc;
+  /* removed for dark mode, but can re add for styling if i add boxes again
+  background-color: #ffffffcc; */
 }
 
  /* KWK section */
  .kwk {
   max-width: 700px;
   margin-top: 20px;
-  background-color: #ffffffcc;
+  /* removed for dark mode, but can re add for styling if i add boxes again
+  background-color: #ffffffcc; */
+}
+
+/* Links section */
+.links {
+  max-width: 700px;
+  margin-top: 20px;
+  /* removed for dark mode, but can re add for styling if i add boxes again
+  background-color: #ffffffcc; */
 }
 
 /* Playlist */
